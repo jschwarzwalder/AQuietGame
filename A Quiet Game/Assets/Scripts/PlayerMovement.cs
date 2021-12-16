@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] CharacterController controller;
-    [SerializeField] float speed = 12f;
+    [SerializeField] float slowSpeed = 3f;    
+    [SerializeField] float walkSpeed = 6f;
+    [SerializeField] float runSpeed = 12f;
     [SerializeField] float gravity = -9.81f;
     [SerializeField] float jumpHeight = 3f;
 
@@ -18,12 +20,17 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] AudioClip walking;
     [SerializeField] AudioClip running;
 
+    public float soundEmitted;
+
     Vector3 velocity;
     bool isGrounded;
     AudioSource footsteps;
+    float speed;
 
     void Start(){
         footsteps = GetComponent<AudioSource>();
+        speed = walkSpeed;
+        soundEmitted = 0;
     }
 
     // Update is called once per frame
@@ -36,13 +43,37 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if((Input.GetAxis("Vertical") != 0.0f) || (Input.GetAxis("Horizontal") != 0.0f)){
-            //play sound 
-             if (!footsteps.isPlaying)
+            
+            // Crouching
+            if (
+                (Input.GetButtonDown("crouch") || Input.GetAxis("Vertical") < 0f)  )         
+            {
+                speed = slowSpeed;
+                footsteps.clip = crouching;
+                soundEmitted = 0;
+
+            } // Running
+            else if ((Input.GetAxis("Vertical") > .5f) || Input.GetButtonDown("shift") && !Input.GetButtonDown("crouch")
+            ) {
+                speed = runSpeed;
+                footsteps.clip = running;
+                soundEmitted = 2;
+
+                // Walking
+            } else {
+                speed = walkSpeed;
+                footsteps.clip = walking;
+                soundEmitted = 1;
+            }
+
+
+
+            if (!footsteps.isPlaying)
             {
                 footsteps.Play();
             }
             
-            Debug.Log("Footsteps Play");
+            
             float x = Input.GetAxis("Horizontal");
             float z = Input.GetAxis("Vertical");
 
@@ -60,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
         } else {
             //pause sound
             footsteps.Pause();
-            Debug.Log("Footsteps Pause");
+            
         }
     }
 }
