@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
                 soundEmitted = 0;
 
             } // Running
-            else if ((Input.GetAxis("Vertical") > .5f) || Input.GetButtonDown("shift") && !Input.GetButtonDown("crouch")
+            else if ((Input.GetAxis("Vertical") > .5f) || (Input.GetButtonDown("shift") && !Input.GetButtonDown("crouch"))
             ) {
                 speed = runSpeed;
                 footsteps.clip = running;
