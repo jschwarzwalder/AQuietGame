@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelSelect : MonoBehaviour
 {
     [SerializeField] float range = 2f;
+    [SerializeField] AudioClip doorOpen;
 
     Transform target;
     AudioSource loadingNextLevelEnglish;
@@ -23,7 +24,7 @@ public class LevelSelect : MonoBehaviour
          float distance = Vector3.Distance(target.position, transform.position);
 
         if(distance <= range){
-            if (!loadingNextLevelEnglish.isPlaying)
+            if (!loadingNextLevelEnglish.isPlaying && target.GetComponent<PlayerMovement>().hasKey)
             {
                 loadingNextLevelEnglish.Play();
             } 
@@ -32,5 +33,10 @@ public class LevelSelect : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
+    }
+
+    void OnDrawGizmosSelected(){
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(transform.position, range);
     }
 }

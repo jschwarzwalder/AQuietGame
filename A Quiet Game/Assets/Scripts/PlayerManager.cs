@@ -16,4 +16,12 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject player;
 
+   void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
 }
