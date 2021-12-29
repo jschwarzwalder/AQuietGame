@@ -20,12 +20,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] AudioClip walking;
     [SerializeField] AudioClip running;
     [SerializeField] AudioClip walkIntoWall;
+
+    [SerializeField] AudioSource wallNarration;
     public bool hasKey;
 
     public float soundEmitted;
 
     Vector3 velocity;
     bool isGrounded;
+    bool wallNarrationPlayed;
     AudioSource footsteps;
     float speed;
 
@@ -48,12 +51,13 @@ public class PlayerMovement : MonoBehaviour
 
         if((Input.GetAxis("Vertical") != 0.0f) || (Input.GetAxis("Horizontal") != 0.0f)){
             
-            // Crouching
+            
             if (intoWall > 0){
                 footsteps.clip = walkIntoWall;
                 soundEmitted = 1;
                 speed = slowSpeed/2;
             }
+            // Crouching
             else if (Input.GetButton("crouch") || Input.GetAxis("Vertical") < .1f)
             {
                 speed = slowSpeed;
@@ -107,6 +111,15 @@ public class PlayerMovement : MonoBehaviour
         if(other.gameObject.tag == "Wall"){
            intoWall += 1;
            Debug.Log("Collided with Wall");
+            if (!wallNarration.isPlaying 
+                && !wallNarrationPlayed 
+                && !wallNarrationPlayed 
+                && GameObject.Find("Narration") == null
+            ) {
+                wallNarration.Play();
+                wallNarrationPlayed = true;
+            }
+          
         }
         Debug.Log("Hi");
  

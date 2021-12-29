@@ -9,7 +9,7 @@ public class KeyCard : MonoBehaviour
     Transform target;
     AudioSource itemSound;
     [SerializeField] AudioClip pickupCard;
-
+    [SerializeField] AudioSource narration;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,11 +27,13 @@ public class KeyCard : MonoBehaviour
             itemSound.Pause();
             itemSound.clip = pickupCard;
             itemSound.Play();
+            narration.PlayScheduled(2d);
          }
 
          if(!itemSound.isPlaying && !player.hasKey){
                 itemSound.Play();
-        } 
+         } 
+         
 
     }
 

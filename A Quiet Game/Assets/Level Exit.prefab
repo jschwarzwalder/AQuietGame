@@ -95,7 +95,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 3, y: 1, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &4887189070033259143
 AudioSource:
@@ -118,7 +118,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 2
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -207,3 +207,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 5
   doorOpen: {fileID: 8300000, guid: 383ebcf39b71d32479b6c8c45422bd1d, type: 3}
+  hasCard: {fileID: 8300000, guid: f4f1101f2aac34f49898f762ba39fddf, type: 3}
+  doesNotHaveCard: {fileID: 8300000, guid: 4b81b027ecb51cc4f8b3c9ca9a789d91, type: 3}

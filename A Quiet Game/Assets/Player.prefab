@@ -506,6 +506,7 @@ GameObject:
   - component: {fileID: 416758064848076510}
   - component: {fileID: 7081227583103657474}
   - component: {fileID: 7081227583103657475}
+  - component: {fileID: 4921189959526721335}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -526,7 +527,6 @@ Transform:
   m_Children:
   - {fileID: 4661093176324029385}
   - {fileID: 1695088758501070701}
-  - {fileID: 1425142749070389635}
   - {fileID: 3454446859968723503}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -576,6 +576,7 @@ MonoBehaviour:
   walking: {fileID: 8300000, guid: 14e845f75a6e1904fa8788a4dceb572e, type: 3}
   running: {fileID: 8300000, guid: a2c67c285c2cf5e45ade2338b0a007c8, type: 3}
   walkIntoWall: {fileID: 8300000, guid: 3bb629b19998331408bbbc6527b1a708, type: 3}
+  wallNarration: {fileID: 4921189959526721335}
   hasKey: 0
   soundEmitted: 0
 --- !u!82 &8802759144948756969
@@ -726,59 +727,28 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &7481293321887443144
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1425142749070389635}
-  - component: {fileID: 6924118187359830060}
-  m_Layer: 0
-  m_Name: Footsteps
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1425142749070389635
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7481293321887443144}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 13, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 9149229005990774242}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &6924118187359830060
+--- !u!82 &4921189959526721335
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7481293321887443144}
+  m_GameObject: {fileID: 7081227583103657476}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e812844a9f9788a4b80564efed619352, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 562c463a3080b7e46b85178010ea3f95, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 5
+  MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -843,7 +813,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1.1
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -881,5 +851,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9149229005990774242}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

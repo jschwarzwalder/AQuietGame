@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 2843129982e9c9245b4725e0b4de92de, type: 2}
---- !u!1 &135622568 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1226665583584078581, guid: 640c41b501298f24698d370718e75b88, type: 3}
-  m_PrefabInstance: {fileID: 1226665583448982877}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &168286680
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +364,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &817564868
 GameObject:
@@ -820,7 +815,7 @@ Transform:
   - {fileID: 602313423}
   - {fileID: 1080014505}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1411501413
 GameObject:
@@ -1172,7 +1167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7898b930c9267b34cb2aa58a81052ac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 135622568}
+  player: {fileID: 1226665583448982878}
 --- !u!4 &1486030604
 Transform:
   m_ObjectHideFlags: 0
@@ -1650,6 +1645,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 640c41b501298f24698d370718e75b88, type: 3}
+--- !u!1 &1226665583448982878 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7081227583103657476, guid: 640c41b501298f24698d370718e75b88, type: 3}
+  m_PrefabInstance: {fileID: 1226665583448982877}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2532084137495703672
 PrefabInstance:
   m_ObjectHideFlags: 0
