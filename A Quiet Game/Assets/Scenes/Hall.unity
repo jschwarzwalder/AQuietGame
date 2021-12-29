@@ -748,7 +748,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a51f697fdf3a40645951e1b044005d5c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.255
+  m_Volume: 0.304
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1507,7 +1507,7 @@ Transform:
   m_Children:
   - {fileID: 314100466}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1349392978
 GameObject:
