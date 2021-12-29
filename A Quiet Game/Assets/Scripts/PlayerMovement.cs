@@ -54,15 +54,14 @@ public class PlayerMovement : MonoBehaviour
                 soundEmitted = 1;
                 speed = slowSpeed/2;
             }
-            else if (
-                (Input.GetButtonDown("crouch") || Input.GetAxis("Vertical") < 0f)  )         
+            else if (Input.GetButton("crouch") || Input.GetAxis("Vertical") < .1f)
             {
                 speed = slowSpeed;
                 footsteps.clip = crouching;
                 soundEmitted = 0;
 
             } // Running
-            else if ((Input.GetAxis("Vertical") > .5f) || (Input.GetButtonDown("shift") && !Input.GetButtonDown("crouch"))
+            else if ((Input.GetAxis("Vertical") > .5f) || (Input.GetButton("shift") && !Input.GetButton("crouch"))
             ) {
                 speed = runSpeed;
                 footsteps.clip = running;
