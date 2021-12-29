@@ -1605,6 +1605,22 @@ PrefabInstance:
       propertyPath: keyCard
       value: 
       objectReference: {fileID: 1798661649}
+    - target: {fileID: 1867951472888959214, guid: ce194a6bd11e07c48b0b854da1bd48fd, type: 3}
+      propertyPath: audioClipArray.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1867951472888959214, guid: ce194a6bd11e07c48b0b854da1bd48fd, type: 3}
+      propertyPath: audioClipArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: ed33d6e4e190b7344beb942d4eefd0ff, type: 3}
+    - target: {fileID: 1867951472888959214, guid: ce194a6bd11e07c48b0b854da1bd48fd, type: 3}
+      propertyPath: audioClipArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 52d8c86c5f02fd14292685660be45f4a, type: 3}
+    - target: {fileID: 1867951472888959214, guid: ce194a6bd11e07c48b0b854da1bd48fd, type: 3}
+      propertyPath: audioClipArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: c67b9daac265d6b479d0c3002937d303, type: 3}
     - target: {fileID: 1867951472888959215, guid: ce194a6bd11e07c48b0b854da1bd48fd, type: 3}
       propertyPath: m_Name
       value: Narration
