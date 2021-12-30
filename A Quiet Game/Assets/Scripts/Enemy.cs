@@ -27,6 +27,7 @@ public class Enemy : MonoBehaviour
     }
 
     public void TakeDamage(int damage){
+            Debug.Log("Enemy took damage");
             health -= damage;
             if (health <= 0) {
                 vocalization.PlayOneShot(death, 1.0f);

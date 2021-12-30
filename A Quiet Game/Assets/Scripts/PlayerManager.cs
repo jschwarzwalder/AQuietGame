@@ -17,7 +17,7 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject player;
     public int health;
-    public ArrayList<String> weapons;
+    public List<string> weapons;
 
    void Update()
     {

@@ -10,8 +10,14 @@ public class Weapon : MonoBehaviour
     public bool allowButtonHold;
     int bulletsLeft, bulletsShot;
 
+    public AudioClip activateSound;
+    public AudioClip shootSound;
+    public AudioClip pickupSound;
+
     //bools 
     bool shooting, readyToShoot, reloading;
+
+    private bool active;
 
     //Reference
     public Camera fpsCam;
@@ -19,20 +25,24 @@ public class Weapon : MonoBehaviour
     public RaycastHit rayHit;
     public LayerMask whatIsEnemy;
 
-     private void Awake()
+    public string getName(){
+        return gameObject.name;
+    }
+    private void Awake()
     {
         bulletsLeft = magazineSize;
         readyToShoot = true;
     }
     private void Update()
     {
-        MyInput();
-
-            }
+        if (active) {
+            MyInput();
+        }
+    }
     private void MyInput()
     {
-        if (allowButtonHold) shooting = Input.GetKey(KeyCode.Mouse0);
-        else shooting = Input.GetKeyDown(KeyCode.Mouse0);
+        if (allowButtonHold) shooting = Input.GetButton("Shoot");
+        else shooting = Input.GetButtonDown("Shoot");
         
         if(bulletsLeft == 0){
            Invoke("Reload", timeBetweenShots);
@@ -46,6 +56,7 @@ public class Weapon : MonoBehaviour
     }
     private void Shoot()
     {
+        Debug.Log("Shoot");
         readyToShoot = false;
 
         //Spread
@@ -66,11 +77,12 @@ public class Weapon : MonoBehaviour
 
         bulletsLeft--;
         bulletsShot--;
+        Debug.Log("Bullets Left: " + bulletsLeft + "bulletsShot: " + bulletsShot);
 
         Invoke("ResetShot", timeBetweenShooting);
 
         if(bulletsShot > 0 && bulletsLeft > 0)
-        Invoke("Shoot", timeBetweenShots);
+            Invoke("Shoot", timeBetweenShots);
 
          
     }
@@ -87,6 +99,17 @@ public class Weapon : MonoBehaviour
     {
         bulletsLeft = magazineSize;
         reloading = false;
+    }
+
+    private void OnTriggerEnter(Collider other) {
+         if(other.CompareTag("Player") ){
+             other.GetComponent<Player>().PickupWeapon(this);
+         }
+    }
+
+    public void ActivateWeapon() {
+        active = true;
+        Debug.Log("Weapon Activated");
     }
 }
 
