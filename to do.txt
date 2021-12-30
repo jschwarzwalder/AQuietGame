@@ -1,0 +1,22 @@
+
+footsteps walking backwards
+
+
+Add Jump and crouch key on controller
+
+Detect Footsteps on terrain.
+
+Weapon Fire with Right Trigger or Mouse Down
+Health with narration
+Inventory rotate when press I on keyboard or B on controller
+Select weapon/item when press K on keyboard or A on controller
+
+
+
+
+footsteps sounds too similar to the pick up card sound.
+
+
+
+
+
