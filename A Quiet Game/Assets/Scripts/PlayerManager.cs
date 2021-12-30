@@ -7,6 +7,7 @@ public class PlayerManager : MonoBehaviour
    #region  Singleton
 
     public static PlayerManager instance;
+   
 
     void Awake(){
         instance = this;
@@ -15,6 +16,8 @@ public class PlayerManager : MonoBehaviour
    #endregion
 
     public GameObject player;
+    public int health;
+    public ArrayList<String> weapons;
 
    void Update()
     {
