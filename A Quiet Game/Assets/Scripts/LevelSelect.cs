@@ -48,7 +48,7 @@ public class LevelSelect : MonoBehaviour
             }
             
                
-        if (!loadingNextLevelEnglish.isPlaying && distance <= range/2 && exitingLevel){
+        if (!loadingNextLevelEnglish.isPlaying && exitingLevel){
                 GameObject.Find("Game Manager").GetComponent<PlayerManager>().health = player.GetComponent<Player>().getHealth();
                 GameObject.Find("Game Manager").GetComponent<PlayerManager>().weapons = player.GetComponent<Player>().getWeapons();
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

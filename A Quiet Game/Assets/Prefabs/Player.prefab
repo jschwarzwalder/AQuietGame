@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.008187969, g: 0.015361397, b: 0.0754717, a: 0.9490196}
+  m_Color: {r: 0.05490196, g: 0.047058824, b: 0.10980392, a: 0.9490196}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -598,6 +598,8 @@ MonoBehaviour:
   firstInjury: {fileID: 0}
   secondInjury: {fileID: 0}
   death: {fileID: 0}
+  fullHealth: {fileID: 0}
+  weapons: []
 --- !u!114 &8190402825564062971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -621,10 +623,10 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 8
-  crouching: {fileID: 8300000, guid: 1d9ea8e9094794b47b8877b66d8d85db, type: 3}
-  walking: {fileID: 8300000, guid: 14e845f75a6e1904fa8788a4dceb572e, type: 3}
-  running: {fileID: 8300000, guid: a2c67c285c2cf5e45ade2338b0a007c8, type: 3}
-  walkIntoWall: {fileID: 8300000, guid: 3bb629b19998331408bbbc6527b1a708, type: 3}
+  crouching: {fileID: 8300000, guid: 97e492ae26747ef46b831754a6ae3953, type: 3}
+  walking: {fileID: 8300000, guid: 744264cd1f781c143847773790d8d26e, type: 3}
+  running: {fileID: 8300000, guid: 6b390732fbd19534d8d92c26dcb75ee0, type: 3}
+  walkIntoWall: {fileID: 8300000, guid: 365130ca7745cf54fb4fd32555f29725, type: 3}
   wallNarration: {fileID: 4921189959526721335}
   hasKey: 0
   soundEmitted: 0

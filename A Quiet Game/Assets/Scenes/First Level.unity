@@ -679,7 +679,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bd4cf616888178846abe5033f600b613, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 32d2a85306e96fd4da4b224e47d7ce02, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1123,6 +1123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 135622568}
+  health: 0
+  weapons: []
 --- !u!4 &1486030604
 Transform:
   m_ObjectHideFlags: 0

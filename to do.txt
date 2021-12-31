@@ -1,6 +1,37 @@
 
-footsteps walking backwards
+Door bug, need to back up and walk into it again. 
+“Teleportation” not working from the first time, alway only from the second.
 
+Verify Level 3 door is working.
+
+• The walls should have a quiet constant sound, like the key card (walls_constant.mp3, TBA).
+• The door should also have a quiet constant sound, door_beep_constant.mp3.
+
+Add sounds for weapon and Enemy being injured. 
+Add Sounds for player being injured.
+• The gun sounds: taken and two sounds of shoot — regular and heavy. If we have just one type, let's use heavy.
+• The quiet roar is constant, the same as now, enemy_roar_constant.mp3.
+• Enemy roars loudly when sees the player, enemy_roar_loud.mp3.
+• Enemy hits and misses (enemy_hits_misses.mp3), TBA.
+• Enemy hits the player and the hit lands (enemy_hits_player.mp3).
+• Enemy is hitted by the player, the sound of player_hits_enemy.mp3 (TBA) and right after enemy_screams.mp3
+• If it's the first hit, when right after the sound of blood dripping from an enemy (enemy_hitted_blood.mp3).
+• If it's the second hit, when the sound of blood spilling (enemy_hitted_blood2.mp3, TBA), and right after the sound of loud fall (enemy_falls.mp3, TBA).
+
+Add Jump Sound.
+
+Let's use this font (free to use), Xolonium-regular.ttf: https://www.dafont.com/xolonium.font
+The color is: #B3EEEC.
+
+
+Remove Controller Description.
+
+The walls and door text-to-voice envelopes when you're near the door and never been near the walls.
+
+The text-to-voice info (walls, door, keycard) repeats in every room — it should be only on a first encounter.
+
+ AI repeats herself about the door when you’re still near it, AI repeats controls in the second room, when you skip them in the first.
+-----
 
 Add Jump and crouch key on controller
 
@@ -16,6 +47,12 @@ Select weapon/item when press K on keyboard or A on controller
 
 footsteps sounds too similar to the pick up card sound.
 
+Save health and weapon inventory to disk.
+
+Announce what room you are entering
+Menu Option to resume or start new game.
+
+Russian Version after Jam
 
 
 
